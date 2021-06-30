@@ -98,70 +98,70 @@ public class UserAgent {
 		OperatingSystemEnum ose = null;
 		String version = null;
 		
-		if (userAgentString.indexOf("Windows") > -1) {
+		if (userAgentString.indexOf("Windows") > -1 || userAgentString.indexOf("Win") > -1) {
 			ose = OperatingSystemEnum.WIN;
 			Pattern pattern = Pattern.compile(ose.getRegex());
 			Matcher matcher = pattern.matcher(userAgentString);
 			if (matcher.find()) {
 				String[] groups = matcher.group().split(ose.getSeparator());
-				if ("NT".equals(groups[1])) {
-					version = groups[2];
-					switch (version) {
-					case "5.0":
-						ose = OperatingSystemEnum.WIN2000;
-						break;
-					case "5.1":
-						ose = OperatingSystemEnum.WINXP;
-						break;
-					case "6.0":
-						ose = OperatingSystemEnum.WINVISTA;
-						break;
-					case "6.1":
-						ose = OperatingSystemEnum.WIN7;
-						break;
-					case "6.2":
-						ose = OperatingSystemEnum.WIN8;
-						break;
-					case "10.0":
-						ose = OperatingSystemEnum.WIN10;
-						break;
-					default:
-						ose = OperatingSystemEnum.WINNT;
-						break;
-					}
-				} else if ("9x".equals(groups[1])) {
-					ose = OperatingSystemEnum.WINME;
-					version = "9x";
-				} else if ("CE".equals(groups[1])) {
-					ose = OperatingSystemEnum.WINCE;
-				} else if ("Ph".equals(groups[1])) {
-					ose = OperatingSystemEnum.WINPHONE;
-					Pattern ph_pattern = Pattern.compile(ose.getRegex());
-					Matcher ph_matcher = ph_pattern.matcher(userAgentString);
-					if (matcher.find()) {
-						version = ph_matcher.group().split(ose.getSeparator())[3];
-						operatingSystem.setName(ose.getName() + " " + version);
-					}
+				if (groups.length == 1) {
+					version = groups[0].substring(3);
+					operatingSystem.setName(ose.getName() + " " + version);
 				} else {
-					operatingSystem.setName(ose.getName() + " " + groups[1]);
+					if ("NT".equals(groups[1])) {
+						version = groups[2];
+						switch (version) {
+						case "5.0":
+							ose = OperatingSystemEnum.WIN2000;
+							break;
+						case "5.1":
+							ose = OperatingSystemEnum.WINXP;
+							break;
+						case "6.0":
+							ose = OperatingSystemEnum.WINVISTA;
+							break;
+						case "6.1":
+							ose = OperatingSystemEnum.WIN7;
+							break;
+						case "6.2":
+							ose = OperatingSystemEnum.WIN8;
+							break;
+						case "10.0":
+							ose = OperatingSystemEnum.WIN10;
+							break;
+						default:
+							ose = OperatingSystemEnum.WINNT;
+							break;
+						}
+					} else if ("9x".equals(groups[1])) {
+						ose = OperatingSystemEnum.WINME;
+						version = "9x";
+					} else if ("CE".equals(groups[1])) {
+						ose = OperatingSystemEnum.WINCE;
+					} else if ("Ph".equals(groups[1])) {
+						ose = OperatingSystemEnum.WINPHONE;
+						version = getVersion(userAgentString, ose);
+						if (version != null) {
+							operatingSystem.setName(ose.getName() + " " + version);
+						}
+					} else {
+						operatingSystem.setName(ose.getName() + " " + groups[1]);
+					}
 				}
 			}
 		} else if (userAgentString.indexOf("iPhone") > -1 || userAgentString.indexOf("iPod") > -1 || userAgentString.indexOf("iPad") > -1) {
 			ose = OperatingSystemEnum.IOS;
-			Pattern pattern = Pattern.compile(ose.getRegex());
-			Matcher matcher = pattern.matcher(userAgentString);
-			if (matcher.find()) {
-				version = matcher.group().split(ose.getSeparator())[3].replace("_", ".");
+			version = getVersion(userAgentString, ose);
+			if (version != null) {
+				version = version.replace("_", ".");
 			} else {
 				version = "2";
 			}
 			operatingSystem.setName(ose.getName() + " " + version);
 		} else if (userAgentString.indexOf("Android") > -1) {
 			ose = OperatingSystemEnum.ANDROID;
-			Pattern pattern = Pattern.compile(ose.getRegex());
-			Matcher matcher = pattern.matcher(userAgentString);
-			if (matcher.find()) {
-				version = matcher.group().split(ose.getSeparator())[1];
+			version = getVersion(userAgentString, ose);
+			if (version != null) {
 				String[] vs = version.split("[.]");
 				operatingSystem.setName(ose.getName() + " " + (vs.length == 1 ? vs[0] : vs[0] + "." + vs[1]));
 			}
@@ -169,6 +169,10 @@ public class UserAgent {
 			ose = OperatingSystemEnum.PS;
 		} else if (userAgentString.indexOf("Mac OS X") > -1) {
 			ose = OperatingSystemEnum.MAC;
+			version = getVersion(userAgentString, ose);
+			if (version != null) {
+				version = version.replace("_", ".");
+			}
 		} else if (userAgentString.indexOf("Linux") > -1) {
 			ose = OperatingSystemEnum.LINUX;
 		} else if (userAgentString.indexOf("Wii") > -1) {
@@ -186,6 +190,17 @@ public class UserAgent {
 		}
 		
 		return operatingSystem;
+	}
+	
+	private String getVersion(String userAgentString, OperatingSystemEnum ose) {
+		String version = null;
+		Pattern pattern = Pattern.compile(ose.getRegex());
+		Matcher matcher = pattern.matcher(userAgentString);
+		if (matcher.find()) {
+			String[] gs = matcher.group().split(ose.getSeparator());
+			version = gs[gs.length - 1];
+		}
+		return version;
 	}
 
 }

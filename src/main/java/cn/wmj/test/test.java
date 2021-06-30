@@ -34,7 +34,14 @@ public class test {
 				"Mozilla/5.0 (Linux; Android 4.2.2; Lenovo A850+ Build/JDQ39; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.134 Mobile Safari/537.36 LeBrowser/8.2.5",
 				"Mozilla/5.0 (Linux; Android 10; iPlay40) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36",
 				"Mozilla/5.0 (Linux; Android 11; NTH-AN00; HMSCore 5.3.0.320) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 HuaweiBrowser/11.0.8.301 Mobile Safari/537.36",
-				"Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Mobile/15E148 Safari/604.1"
+				"Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Mobile/15E148 Safari/604.1",
+				"Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko",
+				"Mozilla/2.02E (Win95; U)",
+				"Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; Win 9x 4.90)",
+				"HTC_Dream Mozilla/5.0 (Linux; U; Android 1.5; en-ca; Build/CUPCAKE) AppleWebKit/528.5  (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1",
+				"Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0",
+				"Opera/9.80 (Macintosh; Intel Mac OS X 10_6_8; U; en) Presto/2.8.131 Version/11.11",
+				"Mozilla/5.0 (iPad; U; CPU OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8J2 Safari/6533.18.5"
 		};
 		
 		for (String agent: agents) {

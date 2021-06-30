@@ -2,7 +2,7 @@ package cn.wmj.enumerate;
 
 public enum BrowserEnum {
 	
-	IE("Internet Explorer", "(MSIE \\d+\\.0)|(rv:\\d+\\.0)", " |:"),
+	IE("Internet Explorer", "(MSIE \\d+\\.\\d+)|(rv:\\d+\\.\\d+)", " |:"),
 	EDGE("Edge", "Edg\\/\\d+\\.\\d+\\.\\d+\\.\\d+", "/"),
 	CHROME("Chrome", "Chrome\\/\\d+\\.\\d+\\.\\d+\\.\\d+", "/"), // 也可能是360，PC搜狗，PC遨游浏览器
 	FIREFOX("Firefox", "Firefox\\/\\d+\\.\\d+", "/"),
