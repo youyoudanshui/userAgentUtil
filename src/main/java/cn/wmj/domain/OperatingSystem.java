@@ -1,5 +1,10 @@
 package cn.wmj.domain;
 
+/**
+ * 操作系统
+ * @author wmj
+ *
+ */
 public class OperatingSystem {
 	
 	String name;

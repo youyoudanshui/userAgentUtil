@@ -8,6 +8,11 @@ import cn.wmj.domain.OperatingSystem;
 import cn.wmj.enumerate.BrowserEnum;
 import cn.wmj.enumerate.OperatingSystemEnum;
 
+/**
+ * User Agent解析类
+ * @author wmj
+ *
+ */
 public class UserAgent {
 	
 	private String userAgentString;
@@ -48,8 +53,6 @@ public class UserAgent {
 			be = BrowserEnum.WX;
 		} else if (userAgentString.indexOf("HuaweiBrowser") > -1) {
 			be = BrowserEnum.HUAWEI;
-		} else if (userAgentString.indexOf("baiduboxapp") > -1) {
-			be = BrowserEnum.BAIDU;
 		} else if (userAgentString.indexOf("MQQBrowser") > -1) {
 			be = BrowserEnum.QQ;
 		} else if (userAgentString.indexOf("UCBrowser") > -1 || userAgentString.indexOf("UBrowser") > -1) {
@@ -64,6 +67,8 @@ public class UserAgent {
 			be = BrowserEnum.MAXTHON;
 		} else if (userAgentString.indexOf("LieBao") > -1) {
 			be = BrowserEnum.LIEBAO;
+		} else if (userAgentString.indexOf("baidu") > -1) {
+			be = BrowserEnum.BAIDU;
 		} else if (userAgentString.indexOf("OPR") > -1) {
 			be = BrowserEnum.OPERA;
 		} else if (userAgentString.indexOf("Edg") > -1) {
@@ -165,8 +170,6 @@ public class UserAgent {
 				String[] vs = version.split("[.]");
 				operatingSystem.setName(ose.getName() + " " + (vs.length == 1 ? vs[0] : vs[0] + "." + vs[1]));
 			}
-		} else if (userAgentString.indexOf("PlayStation") > -1) {
-			ose = OperatingSystemEnum.PS;
 		} else if (userAgentString.indexOf("Mac OS X") > -1) {
 			ose = OperatingSystemEnum.MAC;
 			version = getVersion(userAgentString, ose);
@@ -175,8 +178,6 @@ public class UserAgent {
 			}
 		} else if (userAgentString.indexOf("Linux") > -1) {
 			ose = OperatingSystemEnum.LINUX;
-		} else if (userAgentString.indexOf("Wii") > -1) {
-			ose = OperatingSystemEnum.WII;
 		} else {
 			ose = OperatingSystemEnum.UNKNOWN;
 		}

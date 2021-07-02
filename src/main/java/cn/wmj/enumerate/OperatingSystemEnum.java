@@ -1,5 +1,10 @@
 package cn.wmj.enumerate;
 
+/**
+ * 操作系统
+ * @author wmj
+ *
+ */
 public enum OperatingSystemEnum {
 	
 	WIN("Windows", "Win(?:dows )?([^do]{2})\\s?(\\d+\\.\\d+)?", " "),
@@ -16,8 +21,6 @@ public enum OperatingSystemEnum {
 	MAC("Mac OS X", "Mac OS X (\\d+_\\d+_\\d+)?(\\d+\\.\\d+\\.\\d+)?(\\d+\\.\\d+)?", " "),
 	IOS("iOS", "CPU (?:iPhone )?OS (\\d+_\\d+_\\d+)", " "),
 	ANDROID("Android", "Android \\d+(\\.\\d+)?(\\.\\d+)?", " "),
-	WII("Wii"),
-	PS("PlayStation"),
 	LINUX("Linux"),
 	UNKNOWN("UNKNOWN");
 	

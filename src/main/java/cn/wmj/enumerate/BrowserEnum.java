@@ -1,5 +1,10 @@
 package cn.wmj.enumerate;
 
+/**
+ * 浏览器
+ * @author wmj
+ *
+ */
 public enum BrowserEnum {
 	
 	IE("Internet Explorer", "(MSIE \\d+\\.\\d+)|(rv:\\d+\\.\\d+)", " |:"),

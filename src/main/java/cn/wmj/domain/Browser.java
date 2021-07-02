@@ -1,5 +1,10 @@
 package cn.wmj.domain;
 
+/**
+ * 浏览器
+ * @author wmj
+ *
+ */
 public class Browser {
 	
 	String name;
