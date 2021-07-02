@@ -53,6 +53,8 @@ String userAgentString = "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:1
 UserAgent ua = new UserAgent(userAgentString);
 Browser b = ua.getBrowser();
 String so = ua.getOperatingSystem();
+System.out.println("浏览器名称：" + b.getName() + ",浏览器版本：" + b.getVersion());
+System.out.println("操作系统名称：" + b.getName() + ",操作系统版本：" + b.getVersion());
 ```
 
 
