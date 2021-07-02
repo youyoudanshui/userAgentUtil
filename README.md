@@ -6,7 +6,16 @@
 
 #### 安装教程
 
-执行Maven install
+执行Maven install安装到本地仓库，在需要使用该插件的项目中加入以下依赖：
+
+```
+<dependency>
+    <groupId>cn.wmj</groupId>
+    <artifactId>user-agent-util</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
 
 
 #### 使用示例
