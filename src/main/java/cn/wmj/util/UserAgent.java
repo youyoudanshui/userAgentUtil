@@ -3,8 +3,10 @@ package cn.wmj.util;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import cn.wmj.domain.Bot;
 import cn.wmj.domain.Browser;
 import cn.wmj.domain.OperatingSystem;
+import cn.wmj.enumerate.BotEnum;
 import cn.wmj.enumerate.BrowserEnum;
 import cn.wmj.enumerate.OperatingSystemEnum;
 
@@ -21,10 +23,13 @@ public class UserAgent {
 	
 	private OperatingSystem operatingSystem;
 	
+	private Bot bot;
+	
 	public UserAgent(String userAgentString) {
 		this.userAgentString = userAgentString;
 		this.browser = parseBrowser(userAgentString);
 		this.operatingSystem = parseOperatingSystem(userAgentString);
+		this.bot = parseBot(userAgentString);
 	}
 
 	public String getUserAgentString() {
@@ -37,6 +42,10 @@ public class UserAgent {
 
 	public OperatingSystem getOperatingSystem() {
 		return operatingSystem;
+	}
+	
+	public Bot getBot() {
+		return bot;
 	}
 	
 	private Browser parseBrowser(String userAgentString) {
@@ -53,7 +62,7 @@ public class UserAgent {
 			be = BrowserEnum.WX;
 		} else if (userAgentString.indexOf("HuaweiBrowser") > -1) {
 			be = BrowserEnum.HUAWEI;
-		} else if (userAgentString.indexOf("MQQBrowser") > -1) {
+		} else if (userAgentString.indexOf("QQBrowser") > -1) {
 			be = BrowserEnum.QQ;
 		} else if (userAgentString.indexOf("UCBrowser") > -1 || userAgentString.indexOf("UBrowser") > -1) {
 			be = BrowserEnum.UC;
@@ -67,8 +76,10 @@ public class UserAgent {
 			be = BrowserEnum.MAXTHON;
 		} else if (userAgentString.indexOf("LieBao") > -1) {
 			be = BrowserEnum.LIEBAO;
-		} else if (userAgentString.indexOf("baidu") > -1) {
+		} else if (userAgentString.toLowerCase().indexOf("baidu") > -1) {
 			be = BrowserEnum.BAIDU;
+		} else if (userAgentString.indexOf("Quark") > -1) {
+			be = BrowserEnum.QUARK;
 		} else if (userAgentString.indexOf("OPR") > -1) {
 			be = BrowserEnum.OPERA;
 		} else if (userAgentString.indexOf("Edg") > -1) {
@@ -103,7 +114,29 @@ public class UserAgent {
 		OperatingSystemEnum ose = null;
 		String version = null;
 		
-		if (userAgentString.indexOf("Windows") > -1 || userAgentString.indexOf("Win") > -1) {
+		if (userAgentString.indexOf("iPhone") > -1 || userAgentString.indexOf("iPod") > -1 || userAgentString.indexOf("iPad") > -1) {
+			ose = OperatingSystemEnum.IOS;
+			version = getVersion(userAgentString, ose);
+			if (version != null) {
+				version = version.replace("_", ".");
+			} else {
+				version = "2";
+			}
+			operatingSystem.setName(ose.getName() + " " + version);
+		} else if (userAgentString.indexOf("Android") > -1) {
+			ose = OperatingSystemEnum.ANDROID;
+			version = getVersion(userAgentString, ose);
+			if (version != null) {
+				String[] vs = version.split("[.]");
+				operatingSystem.setName(ose.getName() + " " + (vs.length == 1 ? vs[0] : vs[0] + "." + vs[1]));
+			}
+		} else if (userAgentString.indexOf("Mac OS X") > -1) {
+			ose = OperatingSystemEnum.MAC;
+			version = getVersion(userAgentString, ose);
+			if (version != null) {
+				version = version.replace("_", ".");
+			}
+		} else if (userAgentString.indexOf("Windows") > -1 || userAgentString.indexOf("Win") > -1) {
 			ose = OperatingSystemEnum.WIN;
 			Pattern pattern = Pattern.compile(ose.getRegex());
 			Matcher matcher = pattern.matcher(userAgentString);
@@ -154,28 +187,6 @@ public class UserAgent {
 					}
 				}
 			}
-		} else if (userAgentString.indexOf("iPhone") > -1 || userAgentString.indexOf("iPod") > -1 || userAgentString.indexOf("iPad") > -1) {
-			ose = OperatingSystemEnum.IOS;
-			version = getVersion(userAgentString, ose);
-			if (version != null) {
-				version = version.replace("_", ".");
-			} else {
-				version = "2";
-			}
-			operatingSystem.setName(ose.getName() + " " + version);
-		} else if (userAgentString.indexOf("Android") > -1) {
-			ose = OperatingSystemEnum.ANDROID;
-			version = getVersion(userAgentString, ose);
-			if (version != null) {
-				String[] vs = version.split("[.]");
-				operatingSystem.setName(ose.getName() + " " + (vs.length == 1 ? vs[0] : vs[0] + "." + vs[1]));
-			}
-		} else if (userAgentString.indexOf("Mac OS X") > -1) {
-			ose = OperatingSystemEnum.MAC;
-			version = getVersion(userAgentString, ose);
-			if (version != null) {
-				version = version.replace("_", ".");
-			}
 		} else if (userAgentString.indexOf("Linux") > -1) {
 			ose = OperatingSystemEnum.LINUX;
 		} else {
@@ -190,7 +201,35 @@ public class UserAgent {
 			operatingSystem.setVersion(version);
 		}
 		
+		operatingSystem.setType(ose.getType());
+		
 		return operatingSystem;
+	}
+	
+	private Bot parseBot(String userAgentString) {
+		Bot bot;
+		BotEnum be;
+		
+		if (userAgentString.indexOf("Googlebot") > -1) {
+			be = BotEnum.GOOGLEBOT;
+		} else if (userAgentString.indexOf("BingPreview") > -1) {
+			be = BotEnum.BINGPREVIEW;
+		} else {
+			be = BotEnum.UNKNOWN;
+		}
+		
+		bot = new Bot(be.getName());
+		
+		if (be.getRegex() != null) {
+			Pattern pattern = Pattern.compile(be.getRegex());
+			Matcher matcher = pattern.matcher(userAgentString);
+			if (matcher.find()) {
+				String version = matcher.group().split(be.getSeparator())[1];
+				bot.setVersion(version);
+			}
+		}
+		
+		return bot;
 	}
 	
 	private String getVersion(String userAgentString, OperatingSystemEnum ose) {

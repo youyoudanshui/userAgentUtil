@@ -1,17 +1,18 @@
 package cn.wmj.domain;
 
 /**
- * 操作系统
+ * 搜索引擎爬虫
  * @author wmj
  *
  */
-public class OperatingSystem {
+public class Bot {
 	
 	String name;
 	String version;
-	String type;
 	
-	public OperatingSystem() {}
+	public Bot(String name) {
+		this.name = name;
+	}
 	
 	public String getName() {
 		return name;
@@ -28,18 +29,10 @@ public class OperatingSystem {
 	public void setVersion(String version) {
 		this.version = version;
 	}
-	
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
 
 	@Override
 	public String toString() {
-		return "OperatingSystem [name=" + name + ", version=" + version + ", type=" + type + "]";
+		return "Bot [name=" + name + ", version=" + version + "]";
 	}
 
 }

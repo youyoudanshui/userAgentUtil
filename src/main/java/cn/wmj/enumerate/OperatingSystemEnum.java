@@ -7,35 +7,42 @@ package cn.wmj.enumerate;
  */
 public enum OperatingSystemEnum {
 	
-	WIN("Windows", "Win(?:dows )?([^do]{2})\\s?(\\d+\\.\\d+)?", " "),
-	WINNT("Windows NT"),
-	WIN2000("Windows 2000"),
-	WINXP("Windows XP"),
-	WINVISTA("Windows Vista"),
-	WIN7("Windows 7"),
-	WIN8("Windows 8"),
-	WIN10("Windows 10"),
-	WINME("Windows ME"),
-	WINCE("Windows CE"),
-	WINPHONE("Windows Phone", "Windows Phone OS (\\d+\\.\\d+)", " "),
-	MAC("Mac OS X", "Mac OS X (\\d+_\\d+_\\d+)?(\\d+\\.\\d+\\.\\d+)?(\\d+\\.\\d+)?", " "),
-	IOS("iOS", "CPU (?:iPhone )?OS (\\d+_\\d+_\\d+)", " "),
-	ANDROID("Android", "Android \\d+(\\.\\d+)?(\\.\\d+)?", " "),
-	LINUX("Linux"),
+	WIN("Windows", "Win(?:dows )?([^do]{2})\\s?(\\d+\\.\\d+)?", " ", OperatingSystemTypeEnum.PC.toString()),
+	WINNT("Windows NT", OperatingSystemTypeEnum.PC.toString()),
+	WIN2000("Windows 2000", OperatingSystemTypeEnum.PC.toString()),
+	WINXP("Windows XP", OperatingSystemTypeEnum.PC.toString()),
+	WINVISTA("Windows Vista", OperatingSystemTypeEnum.PC.toString()),
+	WIN7("Windows 7", OperatingSystemTypeEnum.PC.toString()),
+	WIN8("Windows 8", OperatingSystemTypeEnum.PC.toString()),
+	WIN10("Windows 10", OperatingSystemTypeEnum.PC.toString()),
+	WINME("Windows ME", OperatingSystemTypeEnum.PC.toString()),
+	WINCE("Windows CE", OperatingSystemTypeEnum.MOBILE.toString()),
+	WINPHONE("Windows Phone", "Windows Phone OS (\\d+\\.\\d+)", " ", OperatingSystemTypeEnum.MOBILE.toString()),
+	MAC("Mac OS X", "Mac OS X (\\d+_\\d+_\\d+)?(\\d+\\.\\d+\\.\\d+)?(\\d+\\.\\d+)?", " ", OperatingSystemTypeEnum.PC.toString()),
+	IOS("iOS", "CPU (?:iPhone )?OS (\\d+_\\d+_\\d+)", " ", OperatingSystemTypeEnum.MOBILE.toString()),
+	ANDROID("Android", "Android \\d+(\\.\\d+)?(\\.\\d+)?", " ", OperatingSystemTypeEnum.MOBILE.toString()),
+	LINUX("Linux", OperatingSystemTypeEnum.PC.toString()),
 	UNKNOWN("UNKNOWN");
 	
 	private String name;
 	private String regex;
 	private String separator;
+	private String type;
 	
 	private OperatingSystemEnum(String name) {
 		this.name = name;
 	}
 	
-	private OperatingSystemEnum(String name, String regex, String separator) {
+	private OperatingSystemEnum(String name, String type) {
+		this.name = name;
+		this.type = type;
+	}
+	
+	private OperatingSystemEnum(String name, String regex, String separator, String type) {
 		this.name = name;
 		this.regex = regex;
 		this.separator = separator;
+		this.type = type;
 	}
 
 	public String getName() {
@@ -48,6 +55,10 @@ public enum OperatingSystemEnum {
 
 	public String getSeparator() {
 		return separator;
+	}
+	
+	public String getType() {
+		return type;
 	}
 
 }
