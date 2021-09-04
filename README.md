@@ -33,6 +33,10 @@
 4. Android
 5. Linux
 
+- 客户端类型
+1. PC
+2. MOBILE
+
 - 支持识别的爬虫程序：
 1. Google爬虫Googlebot
 2. 必应爬虫BingPreview
