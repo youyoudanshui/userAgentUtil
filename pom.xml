@@ -5,9 +5,11 @@
   <groupId>zone.wmj</groupId>
   <artifactId>user-agent-util</artifactId>
   <version>1.1.0</version>
-  <packaging>maven-plugin</packaging>
+  <packaging>jar</packaging>
 
   <name>user-agent-util Maven Plugin</name>
+  <description>This is a library that can be used to gather information about the user-agent.</description>
+  <url>https://github.com/youyoudanshui/userAgentUtil</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -40,79 +42,104 @@
 
   <build>
     <plugins>
+      <!--Compiler-->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-plugin-plugin</artifactId>
-        <version>3.2</version>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
         <configuration>
-          <goalPrefix>user-agent-util</goalPrefix>
-          <skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
+          <source>1.7</source>
+          <target>1.7</target>
         </configuration>
+      </plugin>
+      <!-- Source -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>2.2.1</version>
         <executions>
           <execution>
-            <id>mojo-descriptor</id>
+            <id>attach-sources</id>
             <goals>
-              <goal>descriptor</goal>
-            </goals>
-          </execution>
-          <execution>
-            <id>help-goal</id>
-            <goals>
-              <goal>helpmojo</goal>
+              <goal>jar-no-fork</goal>
             </goals>
           </execution>
         </executions>
       </plugin>
-      
+      <!-- Javadoc -->
       <plugin>
-	    <groupId>org.apache.maven.plugins</groupId>
-	    <artifactId>maven-compiler-plugin</artifactId>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.9.1</version>
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <!-- GPG mvn clean deploy -P release -Dgpg.passphrase=YourPassphase -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>1.5</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+	    <groupId>org.sonatype.plugins</groupId>
+	    <artifactId>nexus-staging-maven-plugin</artifactId>
+	    <version>1.6.7</version>
+	    <extensions>true</extensions>
 	    <configuration>
-	      <source>1.7</source>
-	      <target>1.7</target>
-	      <encoding>UTF-8</encoding>
+	      <serverId>ossrh</serverId>
+	      <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+	      <autoReleaseAfterClose>true</autoReleaseAfterClose>
 	    </configuration>
 	  </plugin>
     </plugins>
   </build>
-  <profiles>
-    <profile>
-      <id>run-its</id>
-      <build>
+  
+  <licenses>
+    <license>
+      <name>The Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
 
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-invoker-plugin</artifactId>
-            <version>1.7</version>
-            <configuration>
-              <debug>true</debug>
-              <cloneProjectsTo>${project.build.directory}/it</cloneProjectsTo>
-              <pomIncludes>
-                <pomInclude>*/pom.xml</pomInclude>
-              </pomIncludes>
-              <postBuildHookScript>verify</postBuildHookScript>
-              <localRepositoryPath>${project.build.directory}/local-repo</localRepositoryPath>
-              <settingsFile>src/it/settings.xml</settingsFile>
-              <goals>
-                <goal>clean</goal>
-                <goal>test-compile</goal>
-              </goals>
-            </configuration>
-            <executions>
-              <execution>
-                <id>integration-test</id>
-                <goals>
-                  <goal>install</goal>
-                  <goal>integration-test</goal>
-                  <goal>verify</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
+  <developers>
+    <developer>
+      <name>Wan Mianji</name>
+      <email>591483809@qq.com</email>
+      <organization>none</organization>
+      <url>https://github.com/youyoudanshui</url>
+    </developer>
+  </developers>
 
-      </build>
-    </profile>
-  </profiles>
+  <scm>
+    <connection>scm:git:https://github.com/youyoudanshui/userAgentUtil.git</connection>
+    <developerConnection>scm:git:https://github.com/youyoudanshui/userAgentUtil.git</developerConnection>
+    <url>https://github.com/youyoudanshui/userAgentUtil</url>
+    <tag>1.1.0</tag>
+  </scm>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>ossrh</id>
+      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
 </project>
