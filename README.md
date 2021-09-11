@@ -44,11 +44,11 @@
 
 #### 安装教程
 
-插件没有上传中央仓库，需要执行Maven install安装到本地仓库，在使用该插件的项目中加入以下依赖：
+插件已上传中央仓库，在pom.xml加入以下依赖即可使用：
 
 ```
 <dependency>
-    <groupId>cn.wmj</groupId>
+    <groupId>zone.wmj</groupId>
     <artifactId>user-agent-util</artifactId>
     <version>1.1.0</version>
 </dependency>
