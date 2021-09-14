@@ -19,7 +19,7 @@ public enum OperatingSystemEnum {
 	WINCE("Windows CE", OperatingSystemTypeEnum.MOBILE.toString()),
 	WINPHONE("Windows Phone", "Windows Phone OS (\\d+\\.\\d+)", " ", OperatingSystemTypeEnum.MOBILE.toString()),
 	MAC("Mac OS X", "Mac OS X (\\d+_\\d+_\\d+)?(\\d+\\.\\d+\\.\\d+)?(\\d+\\.\\d+)?", " ", OperatingSystemTypeEnum.PC.toString()),
-	IOS("iOS", "CPU (?:iPhone )?OS (\\d+_\\d+_\\d+)", " ", OperatingSystemTypeEnum.MOBILE.toString()),
+	IOS("iOS", "CPU (?:iPhone )?OS (\\d+_\\d+(_\\d+)?)", " ", OperatingSystemTypeEnum.MOBILE.toString()),
 	ANDROID("Android", "Android \\d+(\\.\\d+)?(\\.\\d+)?", " ", OperatingSystemTypeEnum.MOBILE.toString()),
 	LINUX("Linux", OperatingSystemTypeEnum.PC.toString()),
 	UNKNOWN("UNKNOWN");

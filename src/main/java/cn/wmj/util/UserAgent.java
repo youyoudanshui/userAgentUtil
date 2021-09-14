@@ -5,9 +5,11 @@ import java.util.regex.Pattern;
 
 import cn.wmj.domain.Bot;
 import cn.wmj.domain.Browser;
+import cn.wmj.domain.Model;
 import cn.wmj.domain.OperatingSystem;
 import cn.wmj.enumerate.BotEnum;
 import cn.wmj.enumerate.BrowserEnum;
+import cn.wmj.enumerate.ModelEnum;
 import cn.wmj.enumerate.OperatingSystemEnum;
 
 /**
@@ -25,11 +27,14 @@ public class UserAgent {
 	
 	private Bot bot;
 	
+	private Model model;
+	
 	public UserAgent(String userAgentString) {
 		this.userAgentString = userAgentString;
 		this.browser = parseBrowser(userAgentString);
 		this.operatingSystem = parseOperatingSystem(userAgentString);
 		this.bot = parseBot(userAgentString);
+		this.model = parseModel(userAgentString);
 	}
 
 	public String getUserAgentString() {
@@ -48,6 +53,10 @@ public class UserAgent {
 		return bot;
 	}
 	
+	public Model getModel() {
+		return model;
+	}
+	
 	private Browser parseBrowser(String userAgentString) {
 		Browser browser;
 		BrowserEnum be;
@@ -62,6 +71,8 @@ public class UserAgent {
 			be = BrowserEnum.WX;
 		} else if (userAgentString.indexOf("HuaweiBrowser") > -1) {
 			be = BrowserEnum.HUAWEI;
+		} else if (userAgentString.indexOf("baiduboxapp") > -1) {
+			be = BrowserEnum.BAIDU;
 		} else if (userAgentString.indexOf("QQBrowser") > -1) {
 			be = BrowserEnum.QQ;
 		} else if (userAgentString.indexOf("UCBrowser") > -1 || userAgentString.indexOf("UBrowser") > -1) {
@@ -76,8 +87,6 @@ public class UserAgent {
 			be = BrowserEnum.MAXTHON;
 		} else if (userAgentString.indexOf("LieBao") > -1) {
 			be = BrowserEnum.LIEBAO;
-		} else if (userAgentString.toLowerCase().indexOf("baidu") > -1) {
-			be = BrowserEnum.BAIDU;
 		} else if (userAgentString.indexOf("Quark") > -1) {
 			be = BrowserEnum.QUARK;
 		} else if (userAgentString.indexOf("OPR") > -1) {
@@ -214,6 +223,8 @@ public class UserAgent {
 			be = BotEnum.GOOGLEBOT;
 		} else if (userAgentString.indexOf("BingPreview") > -1) {
 			be = BotEnum.BINGPREVIEW;
+		} else if (userAgentString.indexOf("Baiduspider-render") > -1) {
+			be = BotEnum.BAIDUSPIDER_RENDER;
 		} else {
 			be = BotEnum.UNKNOWN;
 		}
@@ -241,6 +252,20 @@ public class UserAgent {
 			version = gs[gs.length - 1];
 		}
 		return version;
+	}
+	
+	private Model parseModel(String userAgentString) {
+		Model model = null;
+		for (ModelEnum modelEnum: ModelEnum.values()) {
+			if (userAgentString.indexOf(modelEnum.getModelString()) > -1) {
+				model = new Model(modelEnum.getName(), modelEnum.getModelString());
+				break;
+			}
+		}
+		if (model == null) {
+			model = new Model("UNKNOWN", null);
+		}
+		return model;
 	}
 
 }
