@@ -63,7 +63,7 @@ public class UserAgent {
 		
 		if (userAgentString.indexOf("MSIE") > -1 || userAgentString.indexOf("Trident") > -1) {
 			be = BrowserEnum.IE;
-		} else if (userAgentString.indexOf("Safari") > -1 && userAgentString.indexOf("Sogou") > -1) {
+		} else if (userAgentString.indexOf("SogouMobileBrowser") > -1 || (userAgentString.indexOf("Chrome") > -1 && userAgentString.indexOf("MetaSr") > -1)) {
 			be = BrowserEnum.SOGOU;
 		} else if (userAgentString.indexOf("360 Alitephone Browser") > -1) {
 			be = BrowserEnum._360;

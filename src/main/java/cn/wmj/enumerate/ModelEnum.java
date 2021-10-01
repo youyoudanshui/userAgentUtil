@@ -117,6 +117,7 @@ public enum ModelEnum {
 	SAMSUNGGN20("三星 Galaxy Note20", "SM-N9810"),
 	SAMSUNGGN20U("三星 Galaxy Note20 Ultra", "SM-N9860"),
 	
+	SAMSUNGGA90("三星 Galaxy A90", "SM-A9080"),
 	SAMSUNGGA71("三星 Galaxy A71", "SM-A7160"),
 	SAMSUNGGA52("三星 Galaxy A52", "SM-A5260"),
 	SAMSUNGGA51("三星 Galaxy A51", "SM-A5160"),
