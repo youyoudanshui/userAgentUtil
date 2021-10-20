@@ -198,6 +198,9 @@ public class UserAgent {
 			}
 		} else if (userAgentString.indexOf("Linux") > -1) {
 			ose = OperatingSystemEnum.LINUX;
+			if (userAgentString.indexOf("UOS") > -1) {
+				version = "UOS";
+			}
 		} else {
 			ose = OperatingSystemEnum.UNKNOWN;
 		}

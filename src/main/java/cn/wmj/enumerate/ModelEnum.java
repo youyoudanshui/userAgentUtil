@@ -38,6 +38,7 @@ public enum ModelEnum {
 	HONORV40QSB("荣耀 V40 轻奢版", "ALA-AN70"),
 	
 	
+	HUAWEIP50("华为 P50", "ABR-AL00"),
 	HUAWEIP50PRO("华为 P50 Pro", "JAD-AL50"),
 	HUAWEIP40("华为 P40", "ANA-AL00"),
 	HUAWEIP40PROPLUS("华为 P40 Pro+", "ELS-AN10"),
@@ -53,6 +54,8 @@ public enum ModelEnum {
 	HUAWEIMATE30EPRO("华为 Mate 30E Pro", "LIO-AN00m"),	
 	HUAWEIMATEX2("华为 Mate X2", "TET-AN00"),
 	
+	HUAWEINOVA9("华为 nova 9", "NAM-AL00"),
+	HUAWEINOVA9PRO("华为 nova 9 Pro", "RTE-AL00"),
 	HUAWEINOVA8("华为 nova 8", "ANG-AN00"),
 	HUAWEINOVA8PRO("华为 nova 8 Pro", "BRQ-AN00"),
 	HUAWEINOVA8SEHLB("华为 nova 8 SE 活力版", "CHL-AL60"),
@@ -67,6 +70,7 @@ public enum ModelEnum {
 	HUAWEICX20PRO("华为 畅享20 Pro", "DVC-AN20"),
 	HUAWEICX20PLUS("华为 畅享20 Plus", "FRL-AN00a"),
 	HUAWEICX10("华为 畅享10", "ART-AL00x"),
+	HUAWEICX10PLUS("华为 畅享10 Plus", "STK-AL00"),
 	HUAWEICX9("华为 畅享9", "DUB-AL00"),
 	
 	HUAWEIMM8("华为 麦芒 8", "POT-AL10"),
@@ -87,7 +91,7 @@ public enum ModelEnum {
 	VIVOS7E("vivo S7e/S7e 活力版", "V2031EA"),
 	VIVOS5("vivo S5", "V1932A"),
 	
-	VIVOY70S("vivo Y70s/70t", "V2002A"),
+	VIVOY70S("vivo Y70s/Y70t", "V2002A"),
 	VIVOY53S("vivo Y53s", "V2111A"),
 	VIVOY52S("vivo Y52s", "V2057A"),
 	VIVOY50("vivo Y50", "V1965A"),
@@ -113,6 +117,7 @@ public enum ModelEnum {
 	SAMSUNGGS21U("三星 Galaxy S21 Ultra", "SM-G9980"),
 	SAMSUNGGS20FE("三星 Galaxy S20 FE", "SM-G7810"),
 	SAMSUNGGS20U("三星 Galaxy S20 Ultra", "SM-G9880"),
+	SAMSUNGGS5("三星 Galaxy S5", "SM-G900P"),
 	
 	SAMSUNGGN20("三星 Galaxy Note20", "SM-N9810"),
 	SAMSUNGGN20U("三星 Galaxy Note20 Ultra", "SM-N9860"),
@@ -125,6 +130,7 @@ public enum ModelEnum {
 	
 	SAMSUNGGF52("三星 Galaxy F52", "SM-E5260"),
 	
+	SAMSUNGW22("三星 W22", "SM-W2022"),
 	SAMSUNGW21("三星 W21", "SM-W2021"),
 	
 	
