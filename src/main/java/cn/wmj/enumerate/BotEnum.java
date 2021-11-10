@@ -10,6 +10,9 @@ public enum BotEnum {
 	GOOGLEBOT("Google爬虫Googlebot", "Googlebot\\/\\d+\\.\\d+", "/"),
 	BINGPREVIEW("必应爬虫BingPreview", "BingPreview\\/\\d+\\.\\w+", "/"),
 	BAIDUSPIDER_RENDER("百度爬虫Baiduspider-render", "Baiduspider-render\\/\\d+\\.\\d+", "/"),
+	
+	OTHER_CMNW("其它爬虫CheckMarkNetwork", "CheckMarkNetwork\\/\\d+\\.\\d+", "/"),
+	
 	UNKNOWN("UNKNOWN");
 	
 	private String name;

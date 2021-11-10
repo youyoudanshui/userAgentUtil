@@ -173,6 +173,9 @@ public class UserAgent {
 						case "6.2":
 							ose = OperatingSystemEnum.WIN8;
 							break;
+						case "6.3":
+							ose = OperatingSystemEnum.WIN8_1;
+							break;
 						case "10.0":
 							ose = OperatingSystemEnum.WIN10;
 							break;
@@ -228,6 +231,8 @@ public class UserAgent {
 			be = BotEnum.BINGPREVIEW;
 		} else if (userAgentString.indexOf("Baiduspider-render") > -1) {
 			be = BotEnum.BAIDUSPIDER_RENDER;
+		} else if (userAgentString.indexOf("CheckMarkNetwork") > -1) {
+			be = BotEnum.OTHER_CMNW;
 		} else {
 			be = BotEnum.UNKNOWN;
 		}

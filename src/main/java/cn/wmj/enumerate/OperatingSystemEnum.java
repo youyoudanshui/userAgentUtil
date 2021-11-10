@@ -14,6 +14,7 @@ public enum OperatingSystemEnum {
 	WINVISTA("Windows Vista", OperatingSystemTypeEnum.PC.toString()),
 	WIN7("Windows 7", OperatingSystemTypeEnum.PC.toString()),
 	WIN8("Windows 8", OperatingSystemTypeEnum.PC.toString()),
+	WIN8_1("Windows 8.1", OperatingSystemTypeEnum.PC.toString()),
 	WIN10("Windows 10", OperatingSystemTypeEnum.PC.toString()),
 	WINME("Windows ME", OperatingSystemTypeEnum.PC.toString()),
 	WINCE("Windows CE", OperatingSystemTypeEnum.MOBILE.toString()),

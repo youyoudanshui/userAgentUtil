@@ -86,10 +86,14 @@ public enum ModelEnum {
 	VIVOX27PRO("vivo X27 Pro", "V1836A"),
 	
 	VIVOS10("vivo S10/S10 Pro", "V2121A"),
+	VIVOS10E("vivo S10e", "V2130A"),
 	VIVOS9("vivo S9", "V2072A"),
 	VIVOS9E("vivo S9e", "V2048A"),
 	VIVOS7E("vivo S7e/S7e 活力版", "V2031EA"),
 	VIVOS5("vivo S5", "V1932A"),
+	
+	VIVOT1("vivo T1", "V2115A"),
+	VIVOT1X("vivo T1x", "V2123A"),
 	
 	VIVOY70S("vivo Y70s/Y70t", "V2002A"),
 	VIVOY53S("vivo Y53s", "V2111A"),
@@ -114,6 +118,7 @@ public enum ModelEnum {
 	SAMSUNGGZFOLD2("三星 Galaxy Z Fold2", "SM-F9160"),
 	
 	SAMSUNGGS21("三星 Galaxy S21", "SM-G9910"),
+	SAMSUNGGS21PLUS("三星 Galaxy S21+", "SM-G9960"),
 	SAMSUNGGS21U("三星 Galaxy S21 Ultra", "SM-G9980"),
 	SAMSUNGGS20FE("三星 Galaxy S20 FE", "SM-G7810"),
 	SAMSUNGGS20U("三星 Galaxy S20 Ultra", "SM-G9880"),
