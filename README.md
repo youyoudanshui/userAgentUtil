@@ -11,7 +11,9 @@ V1.2.1 优化对搜狗浏览器的识别，增加对三星 Galaxy A90机型的�
 
 V1.2.2 增加对部分机型的识别，增加对Linux统信UOS发行版的识别。
 
- **V1.2.3 增加对部分机型的识别，增加对Windows 8.1的识别。** 
+V1.2.3 增加对部分机型的识别，增加对Windows 8.1的识别。
+ 
+ **V1.2.4 增加对部分机型的识别，增加对Linux Ubuntu发行版的识别。** 
 
 - 具体支持识别的浏览器、操作系统和移动端设备型号等，请查看文档 http://www.wmj.zone/userAgentUtil
 
@@ -25,7 +27,7 @@ V1.2.2 增加对部分机型的识别，增加对Linux统信UOS发行版的识�
 <dependency>
     <groupId>zone.wmj</groupId>
     <artifactId>user-agent-util</artifactId>
-    <version>1.2.3</version>
+    <version>1.2.4</version>
 </dependency>
 ```
 

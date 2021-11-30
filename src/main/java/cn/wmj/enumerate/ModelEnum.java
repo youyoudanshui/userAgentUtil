@@ -36,6 +36,7 @@ public enum ModelEnum {
 	HONORCW20("荣耀 畅玩20", "KOZ-AL00"),
 	
 	HONORV40QSB("荣耀 V40 轻奢版", "ALA-AN70"),
+	HONORV10("荣耀 V10", "BKL-AL20"),
 	
 	
 	HUAWEIP50("华为 P50", "ABR-AL00"),
@@ -49,6 +50,7 @@ public enum ModelEnum {
 	HUAWEIMATE40("华为 Mate 40", "OCE-AN10"),
 	HUAWEIMATE40PRO("华为 Mate 40 Pro", "NOH-AL00"),
 	HUAWEIMATE40E("华为 Mate 40E", "OCE-AL50"),
+	HUAWEIMATE40RS("华为 Mate 40 RS 保时捷设计 典藏版", "NOP-AN00"),
 	HUAWEIMATE30("华为 Mate 30", "TAS-AL00"),	
 	HUAWEIMATE30PRO("华为 Mate 30 Pro", "LIO-AN00"),	
 	HUAWEIMATE30EPRO("华为 Mate 30E Pro", "LIO-AN00m"),	
@@ -58,6 +60,7 @@ public enum ModelEnum {
 	HUAWEINOVA9PRO("华为 nova 9 Pro", "RTE-AL00"),
 	HUAWEINOVA8("华为 nova 8", "ANG-AN00"),
 	HUAWEINOVA8PRO("华为 nova 8 Pro", "BRQ-AN00"),
+	HUAWEINOVA8SE("华为 nova 8 SE", "JSC-AL50"),
 	HUAWEINOVA8SEHLB("华为 nova 8 SE 活力版", "CHL-AL60"),
 	HUAWEINOVA7("华为 nova 7", "JEF-AN00"),
 	HUAWEINOVA7PRO("华为 nova 7 Pro", "JER-AN10"),
@@ -71,15 +74,19 @@ public enum ModelEnum {
 	HUAWEICX20PLUS("华为 畅享20 Plus", "FRL-AN00a"),
 	HUAWEICX10("华为 畅享10", "ART-AL00x"),
 	HUAWEICX10PLUS("华为 畅享10 Plus", "STK-AL00"),
+	HUAWEICX10E("华为 畅享10e", "MED-AL00"),
 	HUAWEICX9("华为 畅享9", "DUB-AL00"),
 	
-	HUAWEIMM8("华为 麦芒 8", "POT-AL10"),
+	HUAWEIMM8("华为 麦芒8", "POT-AL10"),
 	
 	
+	VIVOX70("vivo X70", "V2133A"),
+	VIVOX70PRO("vivo X70 Pro", "V2134A"),
+	VIVOX70PROPLUS("vivo X70 Pro+", "V2145A"),
 	VIVOX60("vivo X60", "V2046A"),
 	VIVOX60QPB("vivo X60 曲屏版", "V2059A"),
 	VIVOX60PRO("vivo X60 Pro", "V2047A"),
-	VIVOX60PROPLUS("vivo X60 Pro+", "V2056A"),
+	VIVOX60PROPLUS("vivo X60 Pro+/X60t Pro+", "V2056A"),
 	VIVOX50("vivo X50", "V2001A"),
 	VIVOX50PROPLUS("vivo X50 Pro+", "V2011A"),
 	VIVOX27("vivo X27", "V1829A"),
@@ -93,14 +100,15 @@ public enum ModelEnum {
 	VIVOS5("vivo S5", "V1932A"),
 	
 	VIVOT1("vivo T1", "V2115A"),
-	VIVOT1X("vivo T1x", "V2123A"),
+	VIVOT1X("vivo T1x/Y53s(t2版)", "V2123A"),
 	
+	VIVOY76S("vivo Y76s", "V2156A"),
 	VIVOY70S("vivo Y70s/Y70t", "V2002A"),
 	VIVOY53S("vivo Y53s", "V2111A"),
 	VIVOY52S("vivo Y52s", "V2057A"),
 	VIVOY50("vivo Y50", "V1965A"),
 	VIVOY31S("vivo Y31s/Y52s(t1版)", "V2054A"),
-	VIVOY31SBZB("vivo Y31s 标准版", "V2068A"),
+	VIVOY31SBZB("vivo Y31s 标准版/Y31s(t1版)", "V2068A"),
 	VIVOY30("vivo Y30", "V2034A"),
 	VIVOY30BZB("vivo Y30 标准版", "V2036A"),
 	VIVOY30G("vivo Y30g", "V2066BA"),
