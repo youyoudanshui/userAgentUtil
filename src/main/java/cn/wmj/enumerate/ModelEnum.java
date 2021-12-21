@@ -12,6 +12,8 @@ public enum ModelEnum {
 	IPhone("iPhone", "iPhone"),
 	
 	
+	HONOR60("荣耀60", "LSA-AN00"),
+	HONOR60PRO("荣耀60 Pro", "TNA-AN00"),
 	HONOR50("荣耀50", "NTH-AN00"),
 	HONOR50PRO("荣耀50 Pro", "RNA-AN00"),
 	HONOR50SE("荣耀50 SE", "JLH-AN00"),
@@ -25,14 +27,19 @@ public enum ModelEnum {
 	HONORMAGIC3PRO("荣耀 Magic3 Pro", "ELZ-AN10"),
 	HONORMAGIC3ZZB("荣耀 Magic3 至臻版", "ELZ-AN20"),
 	
+	HONORX30("荣耀 X30", "ADY-AN00"),
+	HONORX30I("荣耀 X30i", "TFY-AN00"),
+	HONORX30MAX("荣耀 X30 Max", "KKG-AN70"),
 	HONORX20("荣耀 X20", "NTN-AN20"),
 	HONORX20SE("荣耀 X20 SE", "CHL-AN00"),
 	HONORX10("荣耀 X10", "TEL-AN00a"),
 	
 	HONORPLAY5("荣耀 Play5", "HJC-AN90"),
+	HONORPLAY5HLB("荣耀 Play5 活力版", "NEW-AN90"),
 	HONORPLAY5T("荣耀 Play5T", "KOZ-AL40"),
 	HONORPLAY5THLB("荣耀 Play5T 活力版", "NZA-AL00"),
 	HONORPLAY5TPRO("荣耀 Play5T Pro", "CHL-AL00"),
+	HONORCW30PLUS("荣耀 畅玩30 Plus", "CMA-AN00"),
 	HONORCW20("荣耀 畅玩20", "KOZ-AL00"),
 	
 	HONORV40QSB("荣耀 V40 轻奢版", "ALA-AN70"),
@@ -46,6 +53,7 @@ public enum ModelEnum {
 	HUAWEIP30("华为 P30", "ELE-AL00"),
 	HUAWEIP30PRO("华为 P30 Pro", "VOG-AL00"),
 	HUAWEIP30PRO2("华为 P30 Pro", "VOG-AL10"),
+	HUAWEIP20("华为 P20", "EML-AL00"),
 	
 	HUAWEIMATE40("华为 Mate 40", "OCE-AN10"),
 	HUAWEIMATE40PRO("华为 Mate 40 Pro", "NOH-AL00"),
@@ -72,6 +80,7 @@ public enum ModelEnum {
 	HUAWEICX20("华为 畅享20", "WKG-AN00"),
 	HUAWEICX20PRO("华为 畅享20 Pro", "DVC-AN20"),
 	HUAWEICX20PLUS("华为 畅享20 Plus", "FRL-AN00a"),
+	HUAWEICX20E("华为 畅享20e", "MLD-AL10"),
 	HUAWEICX10("华为 畅享10", "ART-AL00x"),
 	HUAWEICX10PLUS("华为 畅享10 Plus", "STK-AL00"),
 	HUAWEICX10E("华为 畅享10e", "MED-AL00"),
@@ -104,6 +113,7 @@ public enum ModelEnum {
 	
 	VIVOY76S("vivo Y76s", "V2156A"),
 	VIVOY70S("vivo Y70s/Y70t", "V2002A"),
+	VIVOY55S("vivo Y55s", "V2164A"),
 	VIVOY53S("vivo Y53s", "V2111A"),
 	VIVOY52S("vivo Y52s", "V2057A"),
 	VIVOY50("vivo Y50", "V1965A"),
@@ -148,8 +158,11 @@ public enum ModelEnum {
 	
 	
 	MI10("小米10", "Mi 10"),
-	
+	MI8("小米8", "Mi 8"),
+	MI6("小米6", "Mi 6"),
+		
 	REDMIK20PROZXB("Redmi K20 Pro 尊享版", "Redmi K20 Pro Premium Edition"),
+	
 	
 	IPLAY40("酷比魔方 iPlay40", "iPlay40"),
 	

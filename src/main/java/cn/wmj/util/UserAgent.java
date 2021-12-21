@@ -233,6 +233,8 @@ public class UserAgent {
 			be = BotEnum.BINGPREVIEW;
 		} else if (userAgentString.indexOf("Baiduspider-render") > -1) {
 			be = BotEnum.BAIDUSPIDER_RENDER;
+		} else if (userAgentString.indexOf("YandexBot") > -1) {
+			be = BotEnum.YANDEXBOT;
 		} else if (userAgentString.indexOf("CheckMarkNetwork") > -1) {
 			be = BotEnum.OTHER_CMNW;
 		} else {
