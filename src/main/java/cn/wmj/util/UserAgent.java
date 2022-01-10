@@ -164,6 +164,9 @@ public class UserAgent {
 						case "5.1":
 							ose = OperatingSystemEnum.WINXP;
 							break;
+						case "5.2":
+							ose = OperatingSystemEnum.WIN2003;
+							break;
 						case "6.0":
 							ose = OperatingSystemEnum.WINVISTA;
 							break;

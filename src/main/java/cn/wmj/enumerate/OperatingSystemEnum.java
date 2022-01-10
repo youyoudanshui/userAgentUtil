@@ -11,6 +11,7 @@ public enum OperatingSystemEnum {
 	WINNT("Windows NT", OperatingSystemTypeEnum.PC.toString()),
 	WIN2000("Windows 2000", OperatingSystemTypeEnum.PC.toString()),
 	WINXP("Windows XP", OperatingSystemTypeEnum.PC.toString()),
+	WIN2003("Windows Server 2003", OperatingSystemTypeEnum.PC.toString()),
 	WINVISTA("Windows Vista", OperatingSystemTypeEnum.PC.toString()),
 	WIN7("Windows 7", OperatingSystemTypeEnum.PC.toString()),
 	WIN8("Windows 8", OperatingSystemTypeEnum.PC.toString()),

@@ -15,7 +15,7 @@
 <dependency>
     <groupId>zone.wmj</groupId>
     <artifactId>user-agent-util</artifactId>
-    <version>1.2.5</version>
+    <version>1.2.6</version>
 </dependency>
 ```
 
