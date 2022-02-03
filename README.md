@@ -1,7 +1,7 @@
 # User Agent解析插件
 
 #### 介绍
-根据User Agent获取浏览器和操作系统，特别是满足识别国产和移动端浏览器的需要。由于设备不足，对一些浏览器和操作系统的识别还不完善，希望大家可以提供一些User Agent供测试，尤其是鸿蒙系统的。
+根据User Agent获取浏览器和操作系统，特别是满足识别国产和移动端浏览器的需要。由于设备不足，对一些浏览器和操作系统的识别还不完善，希望大家可以提供一些User Agent供测试。鉴于鸿蒙系统目前并没有脱离安卓，暂不将其作为一个独立的系统进行识别。
 
  **具体支持识别的浏览器、操作系统和移动端设备型号等，请查看文档 http://www.wmj.zone/userAgentUtil** 
 
@@ -15,7 +15,7 @@
 <dependency>
     <groupId>zone.wmj</groupId>
     <artifactId>user-agent-util</artifactId>
-    <version>1.2.6</version>
+    <version>1.2.7</version>
 </dependency>
 ```
 

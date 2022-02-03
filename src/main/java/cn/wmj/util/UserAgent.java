@@ -202,6 +202,12 @@ public class UserAgent {
 					}
 				}
 			}
+		} else if (userAgentString.indexOf("RIM Tablet OS") > -1) {
+			ose = OperatingSystemEnum.BBT;
+			version = getVersion(userAgentString, ose);
+		} else if (userAgentString.indexOf("BB10") > -1) {
+			ose = OperatingSystemEnum.BB10;
+			version = getVersion(userAgentString, ose);
 		} else if (userAgentString.indexOf("Linux") > -1) {
 			ose = OperatingSystemEnum.LINUX;
 			if (userAgentString.indexOf("Ubuntu") > -1) {

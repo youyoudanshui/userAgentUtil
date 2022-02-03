@@ -23,6 +23,7 @@ public enum ModelEnum {
 	HONOR8("荣耀8", "FRD-AL10"),
 	HONOR7("荣耀7", "PLK-AL10"),
 	
+	HONORMAGICV("荣耀 Magic V", "MGI-AN00"),
 	HONORMAGIC3("荣耀 Magic3", "ELZ-AN00"),
 	HONORMAGIC3PRO("荣耀 Magic3 Pro", "ELZ-AN10"),
 	HONORMAGIC3ZZB("荣耀 Magic3 至臻版", "ELZ-AN20"),
@@ -64,6 +65,7 @@ public enum ModelEnum {
 	HUAWEIMATE30("华为 Mate 30", "TAS-AL00"),	
 	HUAWEIMATE30PRO("华为 Mate 30 Pro", "LIO-AN00"),	
 	HUAWEIMATE30EPRO("华为 Mate 30E Pro", "LIO-AN00m"),	
+	HUAWEIMATE20("华为 Mate 20", "HMA-AL00"),
 	HUAWEIMATEX2("华为 Mate X2", "TET-AN00"),
 	
 	HUAWEINOVA9("华为 nova 9", "NAM-AL00"),
@@ -116,6 +118,7 @@ public enum ModelEnum {
 	VIVOT1X("vivo T1x/Y53s(t2版)", "V2123A"),
 	
 	VIVOY76S("vivo Y76s", "V2156A"),
+	VIVOY71T("vivo Y71t", "V2102A"),
 	VIVOY70S("vivo Y70s/Y70t", "V2002A"),
 	VIVOY55S("vivo Y55s", "V2164A"),
 	VIVOY53S("vivo Y53s", "V2111A"),
@@ -127,6 +130,7 @@ public enum ModelEnum {
 	VIVOY30("vivo Y30", "V2034A"),
 	VIVOY30BZB("vivo Y30 标准版", "V2036A"),
 	VIVOY30G("vivo Y30g", "V2066BA"),
+	VIVOY10("vivo Y10(t1版)", "V2168A"),
 	VIVOY9S("vivo Y9s", "V1945A"),
 	VIVOY5S("vivo Y5s", "V1934A"),
 	VIVOY3("vivo Y3/Y3s", "V1901A"),
@@ -144,12 +148,15 @@ public enum ModelEnum {
 	SAMSUNGGS21PLUS("三星 Galaxy S21+", "SM-G9960"),
 	SAMSUNGGS21FE("三星 Galaxy S21 FE", "SM-G9900"),
 	SAMSUNGGS21U("三星 Galaxy S21 Ultra", "SM-G9980"),
+	SAMSUNGGS20("三星 Galaxy S20", "SM-G981B"),
 	SAMSUNGGS20FE("三星 Galaxy S20 FE", "SM-G7810"),
 	SAMSUNGGS20U("三星 Galaxy S20 Ultra", "SM-G9880"),
+	SAMSUNGGS8PLUS("三星 Galaxy S8+", "SM-G955U"),
 	SAMSUNGGS5("三星 Galaxy S5", "SM-G900P"),
 	
 	SAMSUNGGN20("三星 Galaxy Note20", "SM-N9810"),
 	SAMSUNGGN20U("三星 Galaxy Note20 Ultra", "SM-N9860"),
+	SAMSUNGGN2("三星 Galaxy Note2", "GT-N7100"),
 	
 	SAMSUNGGA90("三星 Galaxy A90", "SM-A9080"),
 	SAMSUNGGA71("三星 Galaxy A71", "SM-A7160"),
@@ -174,7 +181,13 @@ public enum ModelEnum {
 	
 	LENOVOA850PLUS("联想 A850+", "Lenovo A850+"),
 	
-	_360N6("360 N6", "1707-A01");
+	_360N6("360 N6", "1707-A01"),
+	
+
+	BBPLAYBOOK("黑莓PlayBook", "PlayBook"),
+	
+	BB10("黑莓手机", "BB10")
+	;
 	
 	private String name;
 	private String modelString;

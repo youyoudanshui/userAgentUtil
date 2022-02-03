@@ -24,6 +24,8 @@ public enum OperatingSystemEnum {
 	IOS("iOS", "CPU (?:iPhone )?OS (\\d+_\\d+(_\\d+)?)", " ", OperatingSystemTypeEnum.MOBILE.toString()),
 	ANDROID("Android", "Android \\d+(\\.\\d+)?(\\.\\d+)?", " ", OperatingSystemTypeEnum.MOBILE.toString()),
 	LINUX("Linux", OperatingSystemTypeEnum.PC.toString()),
+	BB10("BlackBerry 10 OS", "Version\\/\\d+\\.\\d+\\.\\d+\\.\\d+", "/", OperatingSystemTypeEnum.MOBILE.toString()),
+	BBT("BlackBerry Tablet OS", "RIM Tablet OS \\d+\\.\\d+\\.\\d+", " ", OperatingSystemTypeEnum.MOBILE.toString()),
 	UNKNOWN("UNKNOWN");
 	
 	private String name;
