@@ -14,6 +14,7 @@ public enum ModelEnum {
 	
 	HONOR60("荣耀60", "LSA-AN00"),
 	HONOR60PRO("荣耀60 Pro", "TNA-AN00"),
+	HONOR60SE("荣耀60 SE", "GIA-AN00"),
 	HONOR50("荣耀50", "NTH-AN00"),
 	HONOR50PRO("荣耀50 Pro", "RNA-AN00"),
 	HONOR50SE("荣耀50 SE", "JLH-AN00"),
@@ -137,6 +138,7 @@ public enum ModelEnum {
 	VIVOY3BZB("vivo Y3 标准版", "V1930A"),
 	
 	VIVOZ5I("vivo Z5i", "V1941A"),
+	VIVOZ5X("vivo Z5x", "V1911A"),
 	
 	
 	SAMSUNGGZFLIP3("三星 Galaxy Z Flip3", "SM-F7110"),
@@ -144,6 +146,9 @@ public enum ModelEnum {
 	SAMSUNGGZFOLD3("三星 Galaxy Z Fold3", "SM-F9260"),
 	SAMSUNGGZFOLD2("三星 Galaxy Z Fold2", "SM-F9160"),
 	
+	SAMSUNGGS22("三星 Galaxy S22", "SM-S9010"),
+	SAMSUNGGS22PLUS("三星 Galaxy S22+", "SM-S9060"),
+	SAMSUNGGS22U("三星 Galaxy S22 Ultra", "SM-S9080"),
 	SAMSUNGGS21("三星 Galaxy S21", "SM-G9910"),
 	SAMSUNGGS21PLUS("三星 Galaxy S21+", "SM-G9960"),
 	SAMSUNGGS21FE("三星 Galaxy S21 FE", "SM-G9900"),
@@ -168,6 +173,21 @@ public enum ModelEnum {
 	
 	SAMSUNGW22("三星 W22", "SM-W2022"),
 	SAMSUNGW21("三星 W21", "SM-W2021"),
+	
+	
+	REALMEGTNEO2("真我 GT Neo2", "RMX3370"),
+	REALMEGTDSTSB("真我 GT 大师探索版", "RMX3366"),
+	REALMEGTDSB("真我 GT 大师版", "RMX3361"),
+	REALMEGTNeo2T("真我 GT Neo2T", "RMX3357"),
+	REALMEGTNeoSSB("真我 GT Neo 闪速版", "RMX3350"),
+	REALMEGT2("真我 GT2", "RMX3310"),
+	REALMEGT2PRO("真我 GT2 Pro", "RMX3300"),
+	REALMEGTNEO("真我 GT Neo", "RMX3031"),
+	REALMEGT("真我 GT", "RMX2202"),
+	
+	REALMEQ3S("真我 Q3s", "RMX3461"),
+	
+	REALMEV15("真我 V15", "RMX3092"),
 	
 	
 	MI10("小米10", "Mi 10"),
