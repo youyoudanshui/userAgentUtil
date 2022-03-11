@@ -240,6 +240,8 @@ public class UserAgent {
 			be = BotEnum.GOOGLEBOT;
 		} else if (userAgentString.indexOf("BingPreview") > -1) {
 			be = BotEnum.BINGPREVIEW;
+		} else if (userAgentString.indexOf("bingbot") > -1) {
+			be = BotEnum.BINGBOT;
 		} else if (userAgentString.indexOf("Baiduspider-render") > -1) {
 			be = BotEnum.BAIDUSPIDER_RENDER;
 		} else if (userAgentString.indexOf("YandexBot") > -1) {

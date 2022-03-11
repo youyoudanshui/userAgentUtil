@@ -25,6 +25,8 @@ public enum ModelEnum {
 	HONOR7("荣耀7", "PLK-AL10"),
 	
 	HONORMAGICV("荣耀 Magic V", "MGI-AN00"),
+	HONORMAGIC4("荣耀 Magic4", "LGE-AN00"),
+	HONORMAGIC4PRO("荣耀 Magic4 Pro", "LGE-AN10"),
 	HONORMAGIC3("荣耀 Magic3", "ELZ-AN00"),
 	HONORMAGIC3PRO("荣耀 Magic3 Pro", "ELZ-AN10"),
 	HONORMAGIC3ZZB("荣耀 Magic3 至臻版", "ELZ-AN20"),
@@ -97,6 +99,7 @@ public enum ModelEnum {
 	VIVOX70("vivo X70", "V2133A"),
 	VIVOX70PRO("vivo X70 Pro", "V2134A"),
 	VIVOX70PROPLUS("vivo X70 Pro+", "V2145A"),
+	VIVOX70T("vivo X70t", "V2132A"),
 	VIVOX60("vivo X60", "V2046A"),
 	VIVOX60QPB("vivo X60 曲屏版", "V2059A"),
 	VIVOX60PRO("vivo X60 Pro", "V2047A"),
@@ -187,6 +190,7 @@ public enum ModelEnum {
 	
 	REALMEQ3S("真我 Q3s", "RMX3461"),
 	
+	REALMEV25("真我 V25", "RMX3475"),
 	REALMEV15("真我 V15", "RMX3092"),
 	
 	
