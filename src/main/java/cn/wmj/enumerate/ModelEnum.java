@@ -38,6 +38,8 @@ public enum ModelEnum {
 	HONORX20SE("荣耀 X20 SE", "CHL-AN00"),
 	HONORX10("荣耀 X10", "TEL-AN00a"),
 	
+	HONORPLAY6T("荣耀 Play6T", "CMA-AN40"),
+	HONORPLAY6TPRO("荣耀 Play6T Pro", "TFY-AN40"),
 	HONORPLAY5("荣耀 Play5", "HJC-AN90"),
 	HONORPLAY5HLB("荣耀 Play5 活力版", "NEW-AN90"),
 	HONORPLAY5T("荣耀 Play5T", "KOZ-AL40"),
@@ -54,6 +56,7 @@ public enum ModelEnum {
 	HUAWEIP50("华为 P50", "ABR-AL00"),
 	HUAWEIP50PRO("华为 P50 Pro", "JAD-AL50"),
 	HUAWEIP50POCKET("华为 P50 Pocket", "BAL-AL00"),
+	HUAWEIP50E("华为 P50E", "ABR-AL60"),
 	HUAWEIP40("华为 P40", "ANA-AL00"),
 	HUAWEIP40PROPLUS("华为 P40 Pro+", "ELS-AN10"),
 	HUAWEIP30("华为 P30", "ELE-AL00"),
@@ -73,6 +76,7 @@ public enum ModelEnum {
 	
 	HUAWEINOVA9("华为 nova 9", "NAM-AL00"),
 	HUAWEINOVA9PRO("华为 nova 9 Pro", "RTE-AL00"),
+	HUAWEINOVA9SE("华为 nova 9 SE", "JLN-AL00"),
 	HUAWEINOVA8("华为 nova 8", "ANG-AN00"),
 	HUAWEINOVA8PRO("华为 nova 8 Pro", "BRQ-AN00"),
 	HUAWEINOVA8SE("华为 nova 8 SE", "JSC-AL50"),
@@ -128,6 +132,8 @@ public enum ModelEnum {
 	VIVOY53S("vivo Y53s", "V2111A"),
 	VIVOY52S("vivo Y52s", "V2057A"),
 	VIVOY50("vivo Y50", "V1965A"),
+	VIVOY50T("vivo Y50t", "V2023EA"),
+	VIVOY33S("vivo Y33s", "V2166A"),
 	VIVOY32("vivo Y32", "V2158A"),
 	VIVOY31S("vivo Y31s/Y52s(t1版)", "V2054A"),
 	VIVOY31SBZB("vivo Y31s 标准版/Y31s(t1版)", "V2068A"),
@@ -142,7 +148,9 @@ public enum ModelEnum {
 	
 	VIVOZ5I("vivo Z5i", "V1941A"),
 	VIVOZ5X("vivo Z5x", "V1911A"),
-	
+
+	VIVOXFOLD("vivo X Fold", "V2178A"),
+
 	
 	SAMSUNGGZFLIP3("三星 Galaxy Z Flip3", "SM-F7110"),
 	SAMSUNGGZFLIP("三星 Galaxy Z Flip", "SM-F7070"),
@@ -168,6 +176,7 @@ public enum ModelEnum {
 	
 	SAMSUNGGA90("三星 Galaxy A90", "SM-A9080"),
 	SAMSUNGGA71("三星 Galaxy A71", "SM-A7160"),
+	SAMSUNGGA53("三星 Galaxy A53", "SM-A5360"),
 	SAMSUNGGA52("三星 Galaxy A52", "SM-A5260"),
 	SAMSUNGGA51("三星 Galaxy A51", "SM-A5160"),
 	SAMSUNGGA5("三星 Galaxy A5", "SM-A5000"),
@@ -178,6 +187,7 @@ public enum ModelEnum {
 	SAMSUNGW21("三星 W21", "SM-W2021"),
 	
 	
+	REALMEGTNEO3("真我 GT Neo3", "RMX3560"),
 	REALMEGTNEO2("真我 GT Neo2", "RMX3370"),
 	REALMEGTDSTSB("真我 GT 大师探索版", "RMX3366"),
 	REALMEGTDSB("真我 GT 大师版", "RMX3361"),
@@ -188,24 +198,32 @@ public enum ModelEnum {
 	REALMEGTNEO("真我 GT Neo", "RMX3031"),
 	REALMEGT("真我 GT", "RMX2202"),
 	
+	REALMEQ5("真我 Q5", "RMX3478"),
+	REALMEQ5I("真我 Q5i", "RMX3574"),
 	REALMEQ3S("真我 Q3s", "RMX3461"),
-	
+
 	REALMEV25("真我 V25", "RMX3475"),
 	REALMEV15("真我 V15", "RMX3092"),
 	
 	
 	MI10("小米10", "Mi 10"),
+	MI10ZZJNB("小米10 至尊纪念版", "M2007J1SC"),
 	MI8("小米8", "MI 8"),
 	MI6("小米6", "MI 6"),
-		
+	MINOTE2("小米 Note 2", "Mi Note 2"),
+
 	REDMIK20PROZXB("Redmi K20 Pro 尊享版", "Redmi K20 Pro Premium Edition"),
-	
+
+
+	LENOVOZ6PRO("联想 Z6 Pro", "Lenovo L78051"),
+	LENOVOA850PLUS("联想 A850+", "Lenovo A850+"),
+
 	
 	IPLAY40("酷比魔方 iPlay40", "iPlay40"),
-	
-	LENOVOA850PLUS("联想 A850+", "Lenovo A850+"),
-	
+
 	_360N6("360 N6", "1707-A01"),
+
+	UROVOI9000S("优博讯 i9000S", "i9000S"),
 	
 
 	BBPLAYBOOK("黑莓PlayBook", "PlayBook"),
@@ -213,14 +231,14 @@ public enum ModelEnum {
 	BB10("黑莓手机", "BB10")
 	;
 	
-	private String name;
+	private final String name;
 	private String modelString;
 	
-	private ModelEnum(String name) {
+	ModelEnum(String name) {
 		this.name = name;
 	}
 	
-	private ModelEnum(String name, String modelString) {
+	ModelEnum(String name, String modelString) {
 		this.name = name;
 		this.modelString = modelString;
 	}

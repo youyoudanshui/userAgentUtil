@@ -4,7 +4,7 @@
 
   <groupId>zone.wmj</groupId>
   <artifactId>user-agent-util</artifactId>
-  <version>1.2.9</version>
+  <version>1.2.10</version>
   <packaging>jar</packaging>
 
   <name>user-agent-util Maven Plugin</name>
@@ -124,7 +124,7 @@
     <connection>scm:git:https://github.com/youyoudanshui/userAgentUtil.git</connection>
     <developerConnection>scm:git:https://github.com/youyoudanshui/userAgentUtil.git</developerConnection>
     <url>https://github.com/youyoudanshui/userAgentUtil</url>
-    <tag>1.2.9</tag>
+    <tag>1.2.10</tag>
   </scm>
 
   <distributionManagement>

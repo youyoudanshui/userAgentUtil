@@ -26,18 +26,19 @@ public enum BrowserEnum {
 	
 	HUAWEI("华为浏览器", "HuaweiBrowser\\/\\d+\\.\\d+\\.\\d+\\.\\d+", "/"),
 	LE("绿茶浏览器", "LeBrowser\\/\\d+\\.\\d+\\.\\d+", "/"), // 联想手机浏览器
-	
+	MIUI("Miui浏览器", "MiuiBrowser\\/\\d+\\.\\d+\\.\\d+", "/"), // 小米手机浏览器
+
 	UNKNOWN("UNKNOWN");
 	
-	private String name;
+	private final String name;
 	private String regex;
 	private String separator;
 	
-	private BrowserEnum(String name) {
+	BrowserEnum(String name) {
 		this.name = name;
 	}
 	
-	private BrowserEnum(String name, String regex, String separator) {
+	BrowserEnum(String name, String regex, String separator) {
 		this.name = name;
 		this.regex = regex;
 		this.separator = separator;
