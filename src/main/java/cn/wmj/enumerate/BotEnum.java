@@ -18,15 +18,15 @@ public enum BotEnum {
 	
 	UNKNOWN("UNKNOWN");
 	
-	private final String name;
+	private String name;
 	private String regex;
 	private String separator;
-	
-	BotEnum(String name) {
+
+	private BotEnum(String name) {
 		this.name = name;
 	}
-	
-	BotEnum(String name, String regex, String separator) {
+
+	private BotEnum(String name, String regex, String separator) {
 		this.name = name;
 		this.regex = regex;
 		this.separator = separator;
