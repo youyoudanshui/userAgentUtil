@@ -12,20 +12,21 @@ public enum BotEnum {
 	BINGBOT("必应爬虫Bingbot", "bingbot\\/\\d+\\.\\d+", "/"),
 	BAIDUSPIDER_RENDER("百度爬虫Baiduspider-render", "Baiduspider-render\\/\\d+\\.\\d+", "/"),
 	YANDEXBOT("Yandex爬虫YandexBot", "YandexBot\\/\\d+\\.\\d+", "/"),
+	YISOUSPIDER("神马爬虫YisouSpider", "YisouSpider\\/\\d+\\.\\d+", "/"),
 	
 	OTHER_CMNW("其它爬虫CheckMarkNetwork", "CheckMarkNetwork\\/\\d+\\.\\d+", "/"),
 	
 	UNKNOWN("UNKNOWN");
 	
-	private String name;
+	private final String name;
 	private String regex;
 	private String separator;
 	
-	private BotEnum(String name) {
+	BotEnum(String name) {
 		this.name = name;
 	}
 	
-	private BotEnum(String name, String regex, String separator) {
+	BotEnum(String name, String regex, String separator) {
 		this.name = name;
 		this.regex = regex;
 		this.separator = separator;

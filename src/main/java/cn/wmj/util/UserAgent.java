@@ -250,6 +250,8 @@ public class UserAgent {
 			be = BotEnum.YANDEXBOT;
 		} else if (userAgentString.contains("CheckMarkNetwork")) {
 			be = BotEnum.OTHER_CMNW;
+		} else if (userAgentString.contains("YisouSpider")) {
+			be = BotEnum.YISOUSPIDER;
 		} else {
 			be = BotEnum.UNKNOWN;
 		}
